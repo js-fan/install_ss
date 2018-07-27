@@ -1,8 +1,10 @@
 #!/bin/bash
+INSTALL_BBR=0
+
 PASSWORD=cancan.fan
 SERVER_PORT=20863
 METHOD=aes-256-cfb
-TIMEOUT=300
+TIMEOUT=60
 FILENAME=../ss_config.json
 
 
@@ -25,6 +27,7 @@ cat $FILENAME
 
 
 # BBR
-wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-chmod +x bbr.sh && ./bbr.sh
-
+if [ $INSTALL_BBR = 1 ]; then
+    wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+    chmod +x bbr.sh && ./bbr.sh
+fi
