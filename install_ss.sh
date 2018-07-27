@@ -12,7 +12,7 @@ apt-get install build-essential git python-pip
 
 git clone https://github.com/shadowsocks/shadowsocks.git
 cd shadowsocks && git checkout master
-pip install . && cd ..
+pip install setuptools && pip install . && cd ..
 
 echo "{" > $FILENAME
 echo "\"server\":\"::\"," >> $FILENAME
@@ -25,8 +25,6 @@ cat $FILENAME
 
 
 # BBR
-# wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-# chmod +x bbr.sh && ./bbr.sh
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+chmod +x bbr.sh && ./bbr.sh
 
-# BBR_beta
-chmod +x BBR_POWERED.sh && bash BBR_POWERED.sh
