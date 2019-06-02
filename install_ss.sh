@@ -1,7 +1,7 @@
 #!/bin/bash
 INSTALL_BBR=0
 
-PASSWORD=cancan.fan
+PASSWORD=xxxxxxxx
 SERVER_PORT=20863
 METHOD=aes-256-cfb
 TIMEOUT=60
